@@ -91,11 +91,8 @@
     letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 50px 0; font-weight: 800;
 }
 
-.gw-hero-intro {
-    display: flex; justify-content: space-between; align-items: flex-end;
-    margin-bottom: 30px;
-}
-.gw-hero-desc { font-size: 0.85rem; color: var(--color-gray-700); max-width: 220px; line-height: 1.6; margin: 0; }
+.gw-hero-desc { font-size: 0.85rem; color: var(--color-gray-700); line-height: 1.6; margin: 0; }
+.gw-hero-learn-more { display: flex; justify-content: flex-end; }
 
 /* Grid Setup */
 .gw-hero-grid {
@@ -108,10 +105,10 @@
     }
 }
 
-.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; }
+.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: space-between; }
 
 /* Col 1 */
-.gw-col-1 { justify-content: flex-end; }
+.gw-col-1 { justify-content: space-between; }
 .gw-card-abstract {
     width: 100%; aspect-ratio: 1; max-height: 180px;
     border-radius: 2rem; overflow: hidden; position: relative;
@@ -228,7 +225,10 @@
 .gw-pcard-content p { font-size: 0.75rem; color: var(--color-gray-500); margin: 0; line-height: 1.6; }
 .gw-read-more { font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; gap: 8px; cursor: pointer; }
 
-.gw-pcard-img { width: 140px; height: 180px; border-radius: 1.5rem; overflow: hidden; align-self: flex-end; }
+.gw-pcard-img {
+    width: 200px; position: absolute; right: 20px; top: 20px; bottom: 20px;
+    border-radius: 1.5rem; overflow: hidden; align-self: flex-end;
+}
 
 .gw-pcard-light { background-color: var(--color-primary-light); }
 .gw-pcard-badge {
@@ -257,7 +257,7 @@
     overflow: hidden; flex-shrink: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 @media (min-width: 768px) {
-    .gw-huge-center { width: 220px; height: 220px; border-width: 12px; margin: 0 -40px; z-index: 10; }
+    .gw-huge-center { width: 180px; height: 180px; border-width: 10px; margin: 0 -20px; z-index: 10; }
 }
 .gw-huge-right { font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 900; color: var(--color-black); letter-spacing: -0.05em; }
 

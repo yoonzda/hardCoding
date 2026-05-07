@@ -3,12 +3,14 @@
 /* ==========================================================================
    MODULE.CSS
    Color, Typography, Spacing 중심의 체계적인 디자인 시스템 및 유틸리티
-   반응형(Responsive) 환경 고려
    ========================================================================== */
 
-/* 1. CSS Variables (디자인 토큰) */
+/* ==========================================================================
+   1. CSS Variables (공통 변수)
+   - 반응형에 따라 변하지 않는 색상, 굵기, 줄간격 등만 전역 설정
+   ========================================================================== */
 :root {
-    /* 1.1 Colors */
+    /* Colors */
     --color-primary: #4361ee;
     --color-primary-dark: #3a56d4;
     --color-primary-light: #e8ecff;
@@ -25,63 +27,103 @@
     --color-danger: #c92a2a;
     --color-warning: #f59f00;
     
-    /* 1.2 Typography */
-    --font-size-xs: 0.75rem;     /* 12px */
-    --font-size-sm: 0.875rem;    /* 14px */
-    --font-size-base: 1rem;      /* 16px */
-    --font-size-lg: 1.125rem;    /* 18px */
-    --font-size-xl: 1.25rem;     /* 20px */
-    --font-size-2xl: 1.5rem;     /* 24px */
-    --font-size-3xl: 2rem;       /* 32px */
-    --font-size-4xl: 2.5rem;     /* 40px */
-    
+    /* Font Weights */
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --font-weight-black: 900;
     
+    /* Line Heights */
     --line-height-tight: 1.2;
     --line-height-base: 1.5;
     --line-height-loose: 1.8;
-
-    /* 1.3 Spacing (margin, padding) */
-    --space-1: 0.25rem; /* 4px */
-    --space-2: 0.5rem;  /* 8px */
-    --space-3: 0.75rem; /* 12px */
-    --space-4: 1rem;    /* 16px */
-    --space-5: 1.5rem;  /* 24px */
-    --space-6: 2rem;    /* 32px */
-    --space-8: 3rem;    /* 48px */
-    --space-10: 4rem;   /* 64px */
-    --space-12: 6rem;   /* 96px */
 }
 
-/* 태블릿 (768px ~ 1279px) 화면 변수 재정의 */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* ==========================================================================
+   2. 반응형 구간별 변수 (폰트 크기, 여백)
+   - 모바일, 태블릿, 데스크탑 3구간으로 완전히 분리
+   ========================================================================== */
+
+/* [모바일] ~ 767px */
+@media (max-width: 767px) {
     :root {
-        --font-size-2xl: 1.625rem;   /* 26px */
-        --font-size-3xl: 2.25rem;    /* 36px */
-        --font-size-4xl: 3rem;       /* 48px */
-        
-        --space-10: 4.5rem;          /* 72px */
-        --space-12: 7rem;            /* 112px */
+        /* Typography */
+        --font-size-xs: 0.75rem;     /* 12px */
+        --font-size-sm: 0.875rem;    /* 14px */
+        --font-size-base: 1rem;      /* 16px */
+        --font-size-lg: 1.125rem;    /* 18px */
+        --font-size-xl: 1.25rem;     /* 20px */
+        --font-size-2xl: 1.5rem;     /* 24px */
+        --font-size-3xl: 2rem;       /* 32px */
+        --font-size-4xl: 2.5rem;     /* 40px */
+
+        /* Spacing */
+        --space-1: 0.25rem; /* 4px */
+        --space-2: 0.5rem;  /* 8px */
+        --space-3: 0.75rem; /* 12px */
+        --space-4: 1rem;    /* 16px */
+        --space-5: 1.5rem;  /* 24px */
+        --space-6: 2rem;    /* 32px */
+        --space-8: 3rem;    /* 48px */
+        --space-10: 4rem;   /* 64px */
+        --space-12: 6rem;   /* 96px */
     }
 }
 
-/* 데스크탑 (1280px 이상) 화면 변수 재정의 */
+/* [태블릿] 768px ~ 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    :root {
+        /* Typography */
+        --font-size-xs: 0.75rem;     
+        --font-size-sm: 0.875rem;    
+        --font-size-base: 1rem;      
+        --font-size-lg: 1.125rem;    
+        --font-size-xl: 1.25rem;     
+        --font-size-2xl: 1.625rem;   /* 26px */
+        --font-size-3xl: 2.25rem;    /* 36px */
+        --font-size-4xl: 3rem;       /* 48px */
+
+        /* Spacing */
+        --space-1: 0.25rem; 
+        --space-2: 0.5rem;  
+        --space-3: 0.75rem; 
+        --space-4: 1rem;    
+        --space-5: 1.5rem;  
+        --space-6: 2rem;    
+        --space-8: 3rem;    
+        --space-10: 4.5rem; /* 72px */
+        --space-12: 7rem;   /* 112px */
+    }
+}
+
+/* [데스크탑] 1280px 이상 */
 @media (min-width: 1280px) {
     :root {
-        --font-size-2xl: 1.75rem;   /* 28px */
+        /* Typography */
+        --font-size-xs: 0.75rem;     
+        --font-size-sm: 0.875rem;    
+        --font-size-base: 1rem;      
+        --font-size-lg: 1.125rem;    
+        --font-size-xl: 1.25rem;     
+        --font-size-2xl: 1.75rem;    /* 28px */
         --font-size-3xl: 2.5rem;     /* 40px */
         --font-size-4xl: 3.5rem;     /* 56px */
-        
-        --space-10: 5rem;            /* 80px */
-        --space-12: 8rem;            /* 128px */
+
+        /* Spacing */
+        --space-1: 0.25rem; 
+        --space-2: 0.5rem;  
+        --space-3: 0.75rem; 
+        --space-4: 1rem;    
+        --space-5: 1.5rem;  
+        --space-6: 2rem;    
+        --space-8: 3rem;    
+        --space-10: 5rem;   /* 80px */
+        --space-12: 8rem;   /* 128px */
     }
 }
 
 /* ==========================================================================
-   2. COLOR UTILITIES
+   3. COLOR UTILITIES
    ========================================================================== */
 .text-primary { color: var(--color-primary); }
 .text-black { color: var(--color-black); }
@@ -97,7 +139,7 @@
 .bg-white { background-color: var(--color-white); }
 
 /* ==========================================================================
-   3. TYPOGRAPHY UTILITIES
+   4. TYPOGRAPHY UTILITIES
    ========================================================================== */
 .text-xs { font-size: var(--font-size-xs); }
 .text-sm { font-size: var(--font-size-sm); }
@@ -121,11 +163,10 @@
 .leading-base { line-height: var(--line-height-base); }
 .leading-loose { line-height: var(--line-height-loose); }
 
-/* 단어 단위 줄바꿈 방지 */
 .keep-all { word-break: keep-all; }
 
 /* ==========================================================================
-   4. SPACING UTILITIES (m = margin, p = padding, t/b/l/r = 방향)
+   5. SPACING UTILITIES (m = margin, p = padding)
    ========================================================================== */
 .mt-1 { margin-top: var(--space-1); }
 .mt-2 { margin-top: var(--space-2); }
@@ -152,13 +193,12 @@
 .pb-6 { padding-bottom: var(--space-6); }
 .pb-10 { padding-bottom: var(--space-10); }
 
-/* 좌우 공통 패딩 (섹션 기본 패딩용) */
 .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
 .py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
 .py-10 { padding-top: var(--space-10); padding-bottom: var(--space-10); }
 
 /* ==========================================================================
-   5. LAYOUT & COMPONENT MODULES
+   6. LAYOUT & COMPONENT MODULES
    ========================================================================== */
 .container {
     width: 100%;
@@ -169,6 +209,7 @@
     padding-right: var(--space-4);
 }
 
+/* 공통 Layout 클래스 */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
@@ -178,13 +219,19 @@
 .gap-4 { gap: var(--space-4); }
 .gap-6 { gap: var(--space-6); }
 
-/* 반응형 그리드 모듈 */
+/* 공통 Grid 모듈 */
 .grid { display: grid; }
-.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-/* 태블릿 (768px ~ 1279px) 대응 */
+/* 
+  반응형 그리드 컬럼 설정 
+  - 각 화면별로 확실하게 분리된 미디어 쿼리 적용 
+*/
+@media (max-width: 767px) {
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 @media (min-width: 768px) and (max-width: 1279px) {
     .md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
     .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -192,7 +239,6 @@
     .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-/* 데스크탑 (1280px 이상) 대응 */
 @media (min-width: 1280px) {
     .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
     .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }

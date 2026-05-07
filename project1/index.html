@@ -6,169 +6,267 @@
     <title>GreenWorld - Protect Nature</title>
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="./css/import.css">
+    <!-- 폰트어썸 (아이콘용) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 text-black font-regular">
+<body class="bg-white text-black font-regular">
     
     <!-- Navbar -->
-    <header class="header container flex justify-between items-center py-6">
-        <div class="logo font-bold text-xl flex items-center gap-2">
-            <span class="logo-icon bg-black text-white flex-center rounded-full">🌱</span>
+    <header class="container flex justify-between items-center py-6">
+        <div class="font-bold text-xl flex items-center gap-2">
+            <div class="w-8 h-8 bg-black text-white rounded-full flex-center text-sm">🌱</div>
             GreenWorld
         </div>
-        <nav class="nav-links flex gap-4">
-            <a href="#" class="nav-btn bg-white">Projects</a>
-            <a href="#" class="nav-btn bg-white">News</a>
-            <a href="#" class="nav-btn bg-white">Campaigns</a>
+        <nav class="flex gap-3">
+            <a href="#" class="nav-pill"><i class="fa-regular fa-folder"></i> Projects</a>
+            <a href="#" class="nav-pill"><i class="fa-regular fa-newspaper"></i> News</a>
+            <a href="#" class="nav-pill"><i class="fa-solid fa-bullhorn"></i> Campaigns</a>
         </nav>
-        <button class="btn bg-black text-white">Contact Us</button>
+        <button class="btn btn-dark">Contact Us</button>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero container text-center pt-10 pb-16 relative">
-            <div class="hero-bg-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
+        <section class="container relative pt-10 pb-16">
+            <!-- Decorative floating icons -->
+            <div class="floating-icon icon-1"><i class="fa-solid fa-lock"></i></div>
+            <div class="floating-icon icon-2 bg-primary-dark text-white"><i class="fa-solid fa-paperclip"></i></div>
+            <div class="floating-icon icon-3"><i class="fa-solid fa-xmark"></i></div>
+            <div class="floating-icon icon-4"><i class="fa-solid fa-lock"></i></div>
+            
+            <!-- Title -->
+            <div class="text-center mb-10 relative z-10">
+                <h1 class="hero-title font-bold leading-tight">
+                    Join us in the <span class="bg-primary-light px-4 py-1 rounded-2xl">fight</span> for<br>the environment
+                </h1>
             </div>
             
-            <h1 class="hero-title font-bold leading-tight mb-8 relative z-10">
-                Join us in the <span class="highlight bg-primary-light px-4 rounded-xl inline-block">fight</span> for<br>the environment
-            </h1>
-            
-            <div class="hero-intro flex justify-between items-end text-left mb-12 max-w-5xl mx-auto relative z-10 px-4">
-                <p class="text-sm text-gray-700 max-w-xs leading-loose">We are an organization that educates society about the problems of ecology and nature.</p>
-                <button class="btn bg-primary-light text-black font-bold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right-long"></i></button>
+            <!-- Side Text & Button -->
+            <div class="flex justify-between items-end mb-8 relative z-10">
+                <p class="text-xs text-gray-700 max-w-[200px] leading-relaxed">
+                    We are an organization that educates society about the problems of ecology and nature
+                </p>
+                <button class="btn bg-primary-light text-black font-bold flex items-center gap-2">
+                    Learn More <i class="fa-solid fa-arrow-right-long text-xs"></i>
+                </button>
             </div>
 
-            <!-- Custom Hero Grid -->
-            <div class="custom-hero-grid max-w-6xl mx-auto relative z-10">
+            <!-- Hero Grid Layout -->
+            <div class="hero-grid">
                 <!-- Col 1 -->
-                <div class="grid-col col-1 flex-end">
-                    <div class="card bg-primary-dark rounded-3xl flex-center overflow-hidden icon-card">
-                        <i class="fa-solid fa-leaf text-white text-4xl opacity-80"></i>
+                <div class="hero-card bg-primary-light rounded-[2rem] flex-center relative overflow-hidden aspect-square self-end">
+                    <!-- Abstract Shape Background Pattern -->
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&q=80" alt="abstract green" class="img-cover opacity-30 absolute inset-0 mix-blend-multiply">
+                    <div class="w-12 h-12 bg-white/80 rounded-xl rotate-12 relative z-10 flex-center">
+                        <div class="w-4 h-4 bg-primary rounded-sm"></div>
                     </div>
                 </div>
+
                 <!-- Col 2 -->
-                <div class="grid-col col-2 flex-col gap-4">
-                    <div class="card bg-white rounded-3xl p-6 text-left border shadow-sm">
-                        <h3 class="font-bold text-2xl mb-2">+685 trees planted</h3>
-                        <p class="text-xs text-gray-500 leading-relaxed">More than 685 trees were planted last year with the help of our activists.</p>
+                <div class="flex flex-col gap-4">
+                    <div class="hero-card bg-white rounded-[2rem] p-6 border shadow-sm flex-1">
+                        <h3 class="font-bold text-xl mb-2">+685 trees planted</h3>
+                        <p class="text-[11px] text-gray-500 leading-relaxed">More than 685 trees were planted last year with the help of our activists.</p>
                     </div>
-                    <div class="card bg-primary-light rounded-3xl p-6 text-left">
-                        <h3 class="font-bold text-lg mb-2">6 educational<br>programs</h3>
-                        <p class="text-xs text-gray-700 leading-relaxed mt-4">were launched and developed by our specialists to educate young people.</p>
-                    </div>
-                </div>
-                <!-- Col 3 -->
-                <div class="grid-col col-3">
-                    <div class="card main-img-card rounded-[2rem] overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" alt="Planting tree" class="img-cover">
-                        <div class="floating-badge bg-white/95 rounded-2xl p-3 text-sm font-bold flex justify-between items-center shadow-md">
-                            Share with us<br>your results 
-                            <span class="icon-circle bg-gray-900 text-white rounded-full flex-center"><i class="fa-solid fa-arrow-up-right"></i></span>
-                        </div>
+                    <div class="hero-card bg-primary-light rounded-[2rem] p-6 flex-1">
+                        <h3 class="font-bold text-base mb-2 text-center">6 educational<br>programs</h3>
+                        <p class="text-[11px] text-gray-700 leading-relaxed text-center">were launched and developed by our specialists to educate young people.</p>
                     </div>
                 </div>
+
+                <!-- Col 3 (Main Tall Image) -->
+                <div class="hero-card rounded-[2.5rem] overflow-hidden relative min-h-[350px]">
+                    <img src="https://images.unsplash.com/photo-1594705597658-0021b7904031?w=600&q=80" alt="Planting tree" class="img-cover">
+                    <!-- Top Icon -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-white/90 rounded-full flex-center shadow-sm">
+                        <i class="fa-solid fa-leaf text-xs"></i>
+                    </div>
+                    <!-- Bottom Badge -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 rounded-2xl p-3 flex justify-between items-center shadow-md">
+                        <span class="text-xs font-bold px-2">Share with us<br>your results</span>
+                        <div class="w-8 h-8 bg-gray-900 text-white rounded-full flex-center text-xs"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
                 <!-- Col 4 -->
-                <div class="grid-col col-4 flex-col gap-4">
-                    <div class="card bg-gray-900 text-white rounded-3xl p-6 flex flex-col justify-between text-left relative overflow-hidden h-full">
-                        <div class="flex gap-2 mb-8 relative z-10">
-                            <span class="tag border border-white/30 text-white/90 text-[10px] px-3 py-1 rounded-full">SUPPORT</span>
-                            <span class="tag border border-white/30 text-white/90 text-[10px] px-3 py-1 rounded-full">ECOLOGY</span>
+                <div class="flex flex-col gap-4">
+                    <div class="hero-card bg-primary-dark text-white rounded-[2rem] p-6 flex flex-col justify-end relative overflow-hidden flex-1">
+                        <!-- Abstract bg -->
+                        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&q=80" alt="abstract" class="img-cover absolute inset-0 opacity-40 mix-blend-overlay">
+                        <div class="relative z-10 flex gap-2 mb-8">
+                            <span class="tag">SUPPORT</span>
+                            <span class="tag">ECOLOGY</span>
                         </div>
-                        <h3 class="font-bold text-xl relative z-10 leading-snug">Donate and help<br>the environment</h3>
-                        <div class="bg-deco absolute right-0 bottom-0 opacity-20">
-                            <i class="fa-solid fa-seedling text-8xl"></i>
-                        </div>
+                        <h3 class="font-bold text-sm relative z-10 leading-snug">Donate and help<br>the environment</h3>
                     </div>
-                    <div class="card bg-primary-light rounded-[2rem] p-6 flex-center aspect-square max-h-[160px]">
-                        <p class="font-bold text-sm text-center leading-snug text-gray-900">International<br>environment day</p>
+                    <div class="hero-card bg-primary-light rounded-[2rem] p-4 flex-center aspect-square">
+                        <div class="border border-white w-full h-full rounded-[1.5rem] flex-center p-2 border-dashed">
+                            <p class="font-bold text-[11px] text-center text-gray-900 leading-snug">International<br>environment day</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Marquee Banner -->
-        <div class="marquee-wrap bg-primary-light py-3 border-y border-primary-dark overflow-hidden whitespace-nowrap flex items-center">
-            <div class="marquee-content text-sm font-bold text-gray-900 tracking-[0.2em]">
-                GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍
+        <div class="bg-primary-light py-2 border-y border-primary-dark overflow-hidden whitespace-nowrap">
+            <div class="marquee-content text-[11px] font-bold text-gray-900 tracking-widest flex gap-4">
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas text-primary-dark"></i></span>
             </div>
         </div>
 
         <!-- Mission Section -->
-        <section class="container py-20 flex flex-col md:flex-row gap-12 justify-between items-start max-w-5xl mx-auto">
-            <p class="text-gray-500 text-sm max-w-xs leading-loose pt-2">
+        <section class="container py-20 flex flex-col md:flex-row gap-10 justify-between items-start border-b border-gray-200">
+            <p class="text-gray-500 text-xs max-w-[250px] leading-relaxed">
                 The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.
             </p>
-            <div class="max-w-lg">
-                <h2 class="text-[2.5rem] font-bold mb-8 leading-tight text-gray-900">We strive to protect nature for future generations.</h2>
-                <div class="flex gap-4">
-                    <button class="btn bg-primary-light text-gray-900 font-bold">About Us</button>
-                    <button class="btn bg-transparent text-gray-900 font-bold flex items-center gap-2">View Campaigns <i class="fa-solid fa-chevron-right text-xs"></i></button>
+            <div class="max-w-[450px]">
+                <h2 class="text-3xl font-bold mb-8 leading-tight">We strive to protect nature for future generations.</h2>
+                <div class="flex items-center gap-6">
+                    <button class="btn bg-primary-light text-black font-bold text-xs px-6">About Us</button>
+                    <button class="text-black font-bold text-xs flex items-center gap-2 hover:opacity-70 transition">
+                        View Campaigns <i class="fa-solid fa-angle-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="container py-10 max-w-6xl mx-auto">
-            <div class="nav-btn bg-white mb-6 inline-block text-sm border shadow-sm">Our Projects</div>
-            <h2 class="text-4xl font-bold mb-12 max-w-4xl leading-tight text-gray-900">
-                We hold various events, campaigns and raise funds for the implementation of projects to preserve <span class="bg-primary-light px-3 py-1 rounded-xl inline-block">the environment</span>
+        <section class="container py-20">
+            <div class="badge-outline mb-6">Our Projects</div>
+            <h2 class="text-3xl font-bold mb-12 max-w-[800px] leading-tight">
+                We hold various events, campaigns and raise funds for the implementation of projects to preserve <span class="bg-primary-light px-2 rounded-lg">the environment</span>
             </h2>
             
-            <div class="custom-projects-grid">
-                <!-- Card 1 -->
-                <div class="project-card bg-gray-100 rounded-[2rem] p-8 flex flex-col justify-between relative overflow-hidden">
-                    <div class="z-10 relative">
-                        <h3 class="text-2xl font-bold mb-4 max-w-[220px] leading-snug">Cleaning up the Danube</h3>
-                        <p class="text-sm text-gray-500 max-w-[240px] leading-relaxed">Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+            <div class="projects-grid">
+                <!-- Card 1 (Wide) -->
+                <div class="project-card wide bg-gray-100 rounded-[2rem] p-8 flex justify-between">
+                    <div class="flex flex-col justify-between max-w-[200px]">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 leading-snug">Cleaning up the Danube</h3>
+                            <p class="text-[11px] text-gray-500 leading-relaxed">Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                        </div>
+                        <span class="read-more font-bold text-[11px] flex items-center gap-2 mt-8">
+                            Read More <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
+                        </span>
                     </div>
-                    <div class="flex justify-between items-end z-10 relative mt-8">
-                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right"></i></span>
-                    </div>
-                    <!-- Image -->
-                    <div class="absolute right-6 bottom-6 w-32 h-40 rounded-[1.5rem] overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&q=80" alt="River" class="img-cover">
+                    <div class="w-32 rounded-[1.5rem] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&q=80" alt="River" class="img-cover absolute inset-0">
                     </div>
                 </div>
                 
                 <!-- Card 2 -->
                 <div class="project-card bg-primary-light rounded-[2rem] p-8 flex flex-col justify-between">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-lg font-bold bg-white px-5 py-3 rounded-full inline-block shadow-sm">Forest gardens</h3>
-                    </div>
-                    <div class="flex justify-between items-end mt-20">
-                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right text-gray-500"></i></span>
-                        <div class="icon-circle bg-white w-10 h-10 rounded-full flex-center shadow-sm">
-                            <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
-                        </div>
+                    <h3 class="text-sm font-bold bg-white px-4 py-2 rounded-full inline-block self-start shadow-sm">Forest gardens</h3>
+                    <div class="flex justify-between items-end mt-16">
+                        <span class="read-more font-bold text-[11px] flex items-center gap-2">
+                            Read More <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
+                        </span>
+                        <div class="w-8 h-8 bg-white rounded-full flex-center text-gray-400 text-[10px] shadow-sm"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
                 </div>
                 
                 <!-- Card 3 -->
                 <div class="project-card bg-primary-light rounded-[2rem] p-8 flex flex-col justify-between">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-lg font-bold bg-white px-5 py-3 rounded-full inline-block shadow-sm">Become a vo...</h3>
-                    </div>
-                    <div class="flex justify-between items-end mt-20">
-                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right text-gray-500"></i></span>
-                        <div class="icon-circle bg-white w-10 h-10 rounded-full flex-center shadow-sm">
-                            <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
-                        </div>
+                    <h3 class="text-sm font-bold bg-white px-4 py-2 rounded-full inline-block self-start shadow-sm">Become a vo...</h3>
+                    <div class="flex justify-between items-end mt-16">
+                        <span class="read-more font-bold text-[11px] flex items-center gap-2">
+                            Read More <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
+                        </span>
+                        <div class="w-8 h-8 bg-white rounded-full flex-center text-gray-400 text-[10px] shadow-sm"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Huge Text / Campaign Section -->
-        <section class="py-24 flex-center overflow-hidden relative my-10">
-            <div class="campaign-title flex items-center gap-8 text-[8vw] font-black tracking-tighter w-full justify-center">
-                <span class="text-transparent outline-text">GREEN</span>
-                <div class="leaf-circle rounded-full overflow-hidden border-[10px] border-white shrink-0 z-10 shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&q=80" alt="Leaf" class="img-cover">
+        <!-- Huge Text (CAMPAIGNS) Section -->
+        <section class="container py-10 flex-center overflow-hidden border-b border-gray-200 mb-10">
+            <div class="flex items-center justify-center gap-4 text-[5rem] md:text-[7rem] font-black tracking-tighter w-full">
+                <!-- Abstract block behind GREEN -->
+                <div class="relative">
+                    <div class="absolute -left-4 -top-4 w-12 h-12 bg-primary-light opacity-50 z-[-1] rounded-tl-xl rounded-br-xl"></div>
+                    <span class="outline-text">GREEN</span>
                 </div>
-                <span class="text-gray-900">CAMPAIGNS</span>
+                <!-- Circle Image -->
+                <div class="w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full overflow-hidden border-[8px] border-white z-10 shrink-0 shadow-lg relative -mx-8">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=500&q=80" alt="Leaves" class="img-cover scale-110">
+                </div>
+                <span class="text-black z-20">CAMPAIGNS</span>
+            </div>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section class="container py-10">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="text-2xl font-bold flex items-center gap-2">Get Involved <i class="fa-solid fa-arrow-up-right text-lg text-gray-400"></i></h2>
+                <p class="text-[10px] text-gray-400 max-w-[250px] text-right">
+                    Information on the various ways in which visitors can contribute to the work of The GreenWorld
+                </p>
+            </div>
+            
+            <div class="flex flex-col gap-3">
+                <!-- Item 1 -->
+                <div class="accordion-item bg-gray-100 rounded-2xl p-5 flex justify-between items-center cursor-pointer">
+                    <span class="text-sm font-medium">You can become a volunteer</span>
+                    <div class="w-6 h-6 bg-white rounded-full flex-center text-[10px] text-gray-400"><i class="fa-solid fa-arrow-down-right"></i></div>
+                </div>
+                
+                <!-- Item 2 (Active) -->
+                <div class="accordion-item active bg-primary-light rounded-2xl p-6 cursor-pointer">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-base font-bold">You can share information</span>
+                        <div class="w-6 h-6 bg-white rounded-full flex-center text-[10px] text-gray-400"><i class="fa-solid fa-arrow-up-right"></i></div>
+                    </div>
+                    <p class="text-[11px] text-gray-600 max-w-[400px] leading-relaxed">
+                        Help us spread the word about the importance of protecting nature and the environment by sharing our news and posts on social media.
+                    </p>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="accordion-item bg-gray-100 rounded-2xl p-5 flex justify-between items-center cursor-pointer">
+                    <span class="text-sm font-medium">You can make a donation</span>
+                    <div class="w-6 h-6 bg-white rounded-full flex-center text-[10px] text-gray-400"><i class="fa-solid fa-arrow-down-right"></i></div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="accordion-item bg-gray-100 rounded-2xl p-5 flex justify-between items-center cursor-pointer">
+                    <span class="text-sm font-medium">You can participate in campaigns</span>
+                    <div class="w-6 h-6 bg-white rounded-full flex-center text-[10px] text-gray-400"><i class="fa-solid fa-arrow-down-right"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section mt-20 relative pt-10 text-center">
+            <div class="badge-outline bg-white mb-6">Our Gallery</div>
+            <h2 class="text-2xl font-bold mb-12">Evaluate your results<br>by browsing the gallery</h2>
+            
+            <!-- Large Arch Background -->
+            <div class="gallery-arch bg-primary-light pt-16 pb-32 px-4 relative mt-10">
+                <!-- Floating Deco -->
+                <div class="absolute top-10 right-1/4 flex gap-1 opacity-50">
+                    <div class="w-3 h-3 bg-white"></div>
+                    <div class="w-3 h-3 bg-white relative top-3"></div>
+                </div>
+                <div class="absolute bottom-10 right-10 flex gap-1 opacity-50">
+                    <div class="w-4 h-4 bg-white"></div>
+                    <div class="w-4 h-4 bg-white relative -top-4"></div>
+                </div>
+
+                <!-- Big Oval Image -->
+                <div class="gallery-oval mx-auto relative overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1594705597658-0021b7904031?w=1000&q=80" alt="Volunteers" class="img-cover">
+                    <!-- Center Button -->
+                    <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white rounded-full flex-center text-center font-bold text-[10px] shadow-lg cursor-pointer hover:scale-105 transition">
+                        SEE ALL<br>PHOTOS
+                    </button>
+                </div>
             </div>
         </section>
         

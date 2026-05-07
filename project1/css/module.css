@@ -56,8 +56,20 @@
     --space-12: 6rem;   /* 96px */
 }
 
-/* 데스크탑, 태블릿 등 큰 화면에 맞춘 변수 재정의 (반응형 타이포그래피/스페이싱) */
+/* 태블릿 (768px ~ 1279px) 화면 변수 재정의 */
 @media (min-width: 768px) {
+    :root {
+        --font-size-2xl: 1.625rem;   /* 26px */
+        --font-size-3xl: 2.25rem;    /* 36px */
+        --font-size-4xl: 3rem;       /* 48px */
+        
+        --space-10: 4.5rem;          /* 72px */
+        --space-12: 7rem;            /* 112px */
+    }
+}
+
+/* 데스크탑 (1280px 이상) 화면 변수 재정의 */
+@media (min-width: 1280px) {
     :root {
         --font-size-2xl: 1.75rem;   /* 28px */
         --font-size-3xl: 2.5rem;     /* 40px */
@@ -169,13 +181,22 @@
 /* 반응형 그리드 모듈 */
 .grid { display: grid; }
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+/* 태블릿 (768px ~ 1279px) 대응 */
 @media (min-width: 768px) {
+    .md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
     .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-@media (min-width: 1024px) {
+/* 데스크탑 (1280px 이상) 대응 */
+@media (min-width: 1280px) {
+    .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 

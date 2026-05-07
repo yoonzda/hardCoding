@@ -6,152 +6,172 @@
     <title>GreenWorld - Protect Nature</title>
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="./css/import.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-100 text-black font-regular">
     
     <!-- Navbar -->
-    <header class="container flex justify-between items-center py-6">
-        <div class="font-bold text-xl flex items-center gap-2">
-            <span class="flex-center bg-black text-white rounded-full" style="width: 32px; height: 32px; font-size: 14px;">🌱</span>
+    <header class="header container flex justify-between items-center py-6">
+        <div class="logo font-bold text-xl flex items-center gap-2">
+            <span class="logo-icon bg-black text-white flex-center rounded-full">🌱</span>
             GreenWorld
         </div>
-        <nav class="flex gap-4">
-            <a href="#" class="btn-badge bg-white text-gray-700">Projects</a>
-            <a href="#" class="btn-badge bg-white text-gray-700">News</a>
-            <a href="#" class="btn-badge bg-white text-gray-700">Campaigns</a>
+        <nav class="nav-links flex gap-4">
+            <a href="#" class="nav-btn bg-white">Projects</a>
+            <a href="#" class="nav-btn bg-white">News</a>
+            <a href="#" class="nav-btn bg-white">Campaigns</a>
         </nav>
         <button class="btn bg-black text-white">Contact Us</button>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="container text-center py-10">
-            <h1 class="font-bold text-4xl md:text-[4rem] leading-tight mb-8">
-                Join us in the <span class="bg-primary px-3 rounded-xl inline-block">fight</span> for<br>the environment
+        <section class="hero container text-center pt-10 pb-16 relative">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            
+            <h1 class="hero-title font-bold leading-tight mb-8 relative z-10">
+                Join us in the <span class="highlight bg-primary-light px-4 rounded-xl inline-block">fight</span> for<br>the environment
             </h1>
             
-            <div class="flex justify-between items-center text-left mb-10 max-w-4xl mx-auto">
-                <p class="text-sm text-gray-700 max-w-xs">We are an organization that educates society about the problems of ecology and nature.</p>
-                <button class="btn bg-primary text-black font-bold">Learn More ↗</button>
+            <div class="hero-intro flex justify-between items-end text-left mb-12 max-w-5xl mx-auto relative z-10 px-4">
+                <p class="text-sm text-gray-700 max-w-xs leading-loose">We are an organization that educates society about the problems of ecology and nature.</p>
+                <button class="btn bg-primary-light text-black font-bold flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right-long"></i></button>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-4 mt-6">
-                <!-- 1. Left Stack -->
-                <div class="flex flex-col gap-4">
-                    <div class="bg-primary-light rounded-3xl flex-1 flex-center overflow-hidden relative min-h-[200px]">
-                        <div class="w-16 h-16 bg-white opacity-50 rounded-xl rotate-12"></div>
+            <!-- Custom Hero Grid -->
+            <div class="custom-hero-grid max-w-6xl mx-auto relative z-10">
+                <!-- Col 1 -->
+                <div class="grid-col col-1 flex-end">
+                    <div class="card bg-primary-dark rounded-3xl flex-center overflow-hidden icon-card">
+                        <i class="fa-solid fa-leaf text-white text-4xl opacity-80"></i>
                     </div>
                 </div>
-                <!-- 2. Center Left Stats -->
-                <div class="flex flex-col gap-4">
-                    <div class="bg-white rounded-3xl p-6 text-left border flex-1">
+                <!-- Col 2 -->
+                <div class="grid-col col-2 flex-col gap-4">
+                    <div class="card bg-white rounded-3xl p-6 text-left border shadow-sm">
                         <h3 class="font-bold text-2xl mb-2">+685 trees planted</h3>
-                        <p class="text-xs text-gray-500">More than 685 trees were planted last year with the help of our activists.</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">More than 685 trees were planted last year with the help of our activists.</p>
                     </div>
-                    <div class="bg-primary-light rounded-3xl p-6 text-left flex-1">
-                        <h3 class="font-bold text-lg mb-2">6 educational programs</h3>
-                        <p class="text-xs text-gray-700">were launched and developed by our specialists to educate young people.</p>
-                    </div>
-                </div>
-                <!-- 3. Center Right Image -->
-                <div class="rounded-3xl overflow-hidden relative min-h-[300px]">
-                    <img src="https://images.unsplash.com/photo-1594705597658-0021b7904031?w=600&q=80" alt="Planting tree" class="img-cover">
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/90 rounded-2xl p-4 text-sm font-bold flex justify-between items-center">
-                        Share with us your results 
-                        <span class="bg-primary text-black rounded-full w-8 h-8 flex-center">↗</span>
+                    <div class="card bg-primary-light rounded-3xl p-6 text-left">
+                        <h3 class="font-bold text-lg mb-2">6 educational<br>programs</h3>
+                        <p class="text-xs text-gray-700 leading-relaxed mt-4">were launched and developed by our specialists to educate young people.</p>
                     </div>
                 </div>
-                <!-- 4. Right Stack -->
-                <div class="flex flex-col gap-4">
-                    <div class="bg-primary rounded-3xl p-6 flex-1 flex flex-col justify-end text-left relative overflow-hidden">
-                        <div class="absolute top-4 left-4 flex gap-2">
-                            <span class="badge border-white text-white text-xs">SUPPORT</span>
-                            <span class="badge border-white text-white text-xs">ECOLOGY</span>
+                <!-- Col 3 -->
+                <div class="grid-col col-3">
+                    <div class="card main-img-card rounded-[2rem] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" alt="Planting tree" class="img-cover">
+                        <div class="floating-badge bg-white/95 rounded-2xl p-3 text-sm font-bold flex justify-between items-center shadow-md">
+                            Share with us<br>your results 
+                            <span class="icon-circle bg-gray-900 text-white rounded-full flex-center"><i class="fa-solid fa-arrow-up-right"></i></span>
                         </div>
-                        <h3 class="font-bold text-lg">Donate and help<br>the environment</h3>
                     </div>
-                    <div class="bg-white rounded-3xl p-6 flex-1 flex-center border">
-                        <p class="font-medium text-sm text-center text-primary-dark">International<br>environment day</p>
+                </div>
+                <!-- Col 4 -->
+                <div class="grid-col col-4 flex-col gap-4">
+                    <div class="card bg-gray-900 text-white rounded-3xl p-6 flex flex-col justify-between text-left relative overflow-hidden h-full">
+                        <div class="flex gap-2 mb-8 relative z-10">
+                            <span class="tag border border-white/30 text-white/90 text-[10px] px-3 py-1 rounded-full">SUPPORT</span>
+                            <span class="tag border border-white/30 text-white/90 text-[10px] px-3 py-1 rounded-full">ECOLOGY</span>
+                        </div>
+                        <h3 class="font-bold text-xl relative z-10 leading-snug">Donate and help<br>the environment</h3>
+                        <div class="bg-deco absolute right-0 bottom-0 opacity-20">
+                            <i class="fa-solid fa-seedling text-8xl"></i>
+                        </div>
+                    </div>
+                    <div class="card bg-primary-light rounded-[2rem] p-6 flex-center aspect-square max-h-[160px]">
+                        <p class="font-bold text-sm text-center leading-snug text-gray-900">International<br>environment day</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Marquee Banner -->
-        <div class="bg-primary-light py-3 border-y border-gray-300 overflow-hidden whitespace-nowrap flex items-center">
-            <p class="text-sm font-bold text-gray-700 tracking-widest px-4">
-                GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍
-            </p>
+        <div class="marquee-wrap bg-primary-light py-3 border-y border-primary-dark overflow-hidden whitespace-nowrap flex items-center">
+            <div class="marquee-content text-sm font-bold text-gray-900 tracking-[0.2em]">
+                GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍 GREEN THE PLANET 🌍
+            </div>
         </div>
 
         <!-- Mission Section -->
-        <section class="container py-16 flex flex-col md:flex-row gap-10 justify-between items-start">
-            <p class="text-gray-500 text-sm max-w-xs leading-loose">
+        <section class="container py-20 flex flex-col md:flex-row gap-12 justify-between items-start max-w-5xl mx-auto">
+            <p class="text-gray-500 text-sm max-w-xs leading-loose pt-2">
                 The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.
             </p>
-            <div class="max-w-md">
-                <h2 class="text-3xl font-bold mb-8 leading-tight">We strive to protect nature for future generations.</h2>
+            <div class="max-w-lg">
+                <h2 class="text-[2.5rem] font-bold mb-8 leading-tight text-gray-900">We strive to protect nature for future generations.</h2>
                 <div class="flex gap-4">
-                    <button class="btn bg-primary text-black font-bold">About Us</button>
-                    <button class="btn text-black font-bold">View Campaigns →</button>
+                    <button class="btn bg-primary-light text-gray-900 font-bold">About Us</button>
+                    <button class="btn bg-transparent text-gray-900 font-bold flex items-center gap-2">View Campaigns <i class="fa-solid fa-chevron-right text-xs"></i></button>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="container py-10">
-            <div class="btn-badge bg-white mb-6 inline-block">Our Projects</div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 max-w-3xl leading-tight">
-                We hold various events, campaigns and raise funds for the implementation of projects to preserve <span class="bg-primary-light px-3 rounded-xl inline-block">the environment</span>
+        <section class="container py-10 max-w-6xl mx-auto">
+            <div class="nav-btn bg-white mb-6 inline-block text-sm border shadow-sm">Our Projects</div>
+            <h2 class="text-4xl font-bold mb-12 max-w-4xl leading-tight text-gray-900">
+                We hold various events, campaigns and raise funds for the implementation of projects to preserve <span class="bg-primary-light px-3 py-1 rounded-xl inline-block">the environment</span>
             </h2>
             
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="custom-projects-grid">
                 <!-- Card 1 -->
-                <div class="bg-gray-100 rounded-3xl p-6 flex flex-col justify-between min-h-[280px]">
-                    <div>
-                        <h3 class="text-xl font-bold mb-3 max-w-[200px]">Cleaning up the Danube</h3>
-                        <p class="text-xs text-gray-500 max-w-[200px] leading-relaxed">Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                <div class="project-card bg-gray-100 rounded-[2rem] p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="z-10 relative">
+                        <h3 class="text-2xl font-bold mb-4 max-w-[220px] leading-snug">Cleaning up the Danube</h3>
+                        <p class="text-sm text-gray-500 max-w-[240px] leading-relaxed">Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
                     </div>
-                    <div class="flex justify-between items-end">
-                        <span class="text-xs font-bold bg-white px-4 py-2 rounded-full">Read More ↗</span>
-                        <div class="w-24 h-24 rounded-2xl overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=300&q=80" alt="River" class="img-cover">
+                    <div class="flex justify-between items-end z-10 relative mt-8">
+                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right"></i></span>
+                    </div>
+                    <!-- Image -->
+                    <div class="absolute right-6 bottom-6 w-32 h-40 rounded-[1.5rem] overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&q=80" alt="River" class="img-cover">
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="project-card bg-primary-light rounded-[2rem] p-8 flex flex-col justify-between">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-lg font-bold bg-white px-5 py-3 rounded-full inline-block shadow-sm">Forest gardens</h3>
+                    </div>
+                    <div class="flex justify-between items-end mt-20">
+                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right text-gray-500"></i></span>
+                        <div class="icon-circle bg-white w-10 h-10 rounded-full flex-center shadow-sm">
+                            <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-primary-light rounded-3xl p-6 flex flex-col justify-between min-h-[280px]">
-                    <div class="flex justify-between items-start">
-                        <h3 class="text-lg font-bold bg-white px-4 py-2 rounded-full inline-block">Forest gardens</h3>
-                    </div>
-                    <div class="flex justify-between items-end">
-                        <span class="text-xs font-bold bg-white px-4 py-2 rounded-full">Read More ↗</span>
-                    </div>
-                </div>
+                
                 <!-- Card 3 -->
-                <div class="bg-primary-light rounded-3xl p-6 flex flex-col justify-between min-h-[280px]">
+                <div class="project-card bg-primary-light rounded-[2rem] p-8 flex flex-col justify-between">
                     <div class="flex justify-between items-start">
-                        <h3 class="text-lg font-bold bg-white px-4 py-2 rounded-full inline-block">Become a vo...</h3>
+                        <h3 class="text-lg font-bold bg-white px-5 py-3 rounded-full inline-block shadow-sm">Become a vo...</h3>
                     </div>
-                    <div class="flex justify-between items-end">
-                        <span class="text-xs font-bold bg-white px-4 py-2 rounded-full">Read More ↗</span>
+                    <div class="flex justify-between items-end mt-20">
+                        <span class="read-more font-bold text-sm flex items-center gap-2 cursor-pointer">Read More <i class="fa-solid fa-arrow-up-right text-gray-500"></i></span>
+                        <div class="icon-circle bg-white w-10 h-10 rounded-full flex-center shadow-sm">
+                            <i class="fa-solid fa-arrow-up-right text-gray-400"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Big Typography Section -->
-        <section class="py-20 flex-center overflow-hidden relative">
-            <div class="flex items-center gap-6 text-[6rem] md:text-[10rem] font-black tracking-tighter">
-                <span class="text-transparent" style="-webkit-text-stroke: 2px var(--color-gray-300);">GREEN</span>
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white shrink-0 z-10 shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=500&q=80" alt="Leaf" class="img-cover">
+        <!-- Huge Text / Campaign Section -->
+        <section class="py-24 flex-center overflow-hidden relative my-10">
+            <div class="campaign-title flex items-center gap-8 text-[8vw] font-black tracking-tighter w-full justify-center">
+                <span class="text-transparent outline-text">GREEN</span>
+                <div class="leaf-circle rounded-full overflow-hidden border-[10px] border-white shrink-0 z-10 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&q=80" alt="Leaf" class="img-cover">
                 </div>
-                <span class="text-black">CAMPAIGN</span>
+                <span class="text-gray-900">CAMPAIGNS</span>
             </div>
         </section>
         
-        <br><br><br>
     </main>
 </body>
 </html>

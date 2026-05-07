@@ -39,33 +39,44 @@
     background: radial-gradient(circle, rgba(220,237,200,0.4) 0%, rgba(255,255,255,0) 60%); z-index: -1;
 }
 
-/* Staggered Grid */
+/* Staggered Grid - Bulletproof Exact Placement */
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
 @media (min-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1.1fr 1.6fr 2fr 1.3fr;
-        align-items: end; /* Align to bottom floor */
+        grid-template-rows: 80px 180px 140px;
+        gap: 20px;
+        align-items: stretch;
     }
+    
+    .text-item { grid-column: 1; grid-row: 1; align-self: start; }
+    .abstract-item { grid-column: 1; grid-row: 3; align-self: end; }
+
+    .white-item { grid-column: 2; grid-row: 2; }
+    .green-item { grid-column: 2; grid-row: 3; }
+
+    .tree-item { grid-column: 3; grid-row: 2 / span 2; }
+
+    .btn-item { grid-column: 4; grid-row: 1; align-self: start; justify-self: end; }
+    .darkgreen-item { grid-column: 4; grid-row: 2; }
+    .dashed-item { grid-column: 4; grid-row: 3; }
 }
-.hero-col-tall { height: 480px; }
-.hero-col-short { height: 380px; }
 
 .hero-desc { max-width: 200px; }
-.hero-learn-more { margin-bottom: auto; } /* Pushes the rest of col 4 to bottom */
 
 .card-abstract { width: 100%; aspect-ratio: 1; max-height: 160px; border-radius: 2rem; }
 .abstract-center { width: 48px; height: 48px; border-radius: 12px; transform: rotate(15deg); z-index: 2; }
 .abstract-dot { width: 16px; height: 16px; background-color: #2b5329; border-radius: 4px; }
 
-.card { border-radius: 2rem; padding: 24px; flex: 1; }
+.card { border-radius: 2rem; padding: 24px; }
 .card-main { height: 100%; border-radius: 2.5rem; }
 .main-top-icon { top: 20px; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 14px; }
 .main-badge { bottom: 20px; left: 20px; right: 20px; border-radius: 1.5rem; padding: 14px 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 .badge-icon { width: 32px; height: 32px; border-radius: 50%; font-size: 12px; }
 
-.card-darkgreen { background-color: #648261; height: 140px; }
+.card-darkgreen { background-color: #648261; }
 .tag { border: 1px solid rgba(255,255,255,0.4); padding: 4px 12px; border-radius: 20px; font-size: 0.6rem; }
-.card-dashed { height: 120px; padding: 16px; }
+.card-dashed { padding: 16px; }
 .dashed-inner { border: 1px dashed rgba(0,0,0,0.2); border-radius: 1.5rem; }
 
 /* ==========================================================================
@@ -84,8 +95,8 @@
     .projects-grid { grid-template-columns: 2fr 1.1fr 1.1fr; height: 300px; }
 }
 .pcard { border-radius: 2rem; padding: 40px; }
-.pcard-wide { padding: 24px 24px 24px 40px; }
-.pcard-img { width: 45%; border-radius: 1.5rem; }
+.pcard-wide { padding: 24px 24px 24px 40px; align-items: stretch; min-height: 280px; }
+.pcard-img { width: 45%; border-radius: 1.5rem; overflow: hidden; }
 .pcard-badge { padding: 10px 20px; border-radius: 30px; display: inline-block; }
 .pcard-light::after {
     content: ''; position: absolute; right: -30px; bottom: -30px; width: 180px; height: 180px; background-color: rgba(255,255,255,0.4); border-radius: 50%; z-index: 1;
@@ -95,7 +106,7 @@
 /* ==========================================================================
    Campaigns Huge Text
    ========================================================================== */
-.huge-left { font-size: clamp(3rem, 7vw, 6.5rem); -webkit-text-stroke: 2px var(--color-gray-300); color: transparent; letter-spacing: -0.05em; }
+.huge-left { font-size: clamp(3rem, 7vw, 6.5rem); -webkit-text-stroke: 2px #dcedc8; color: transparent; letter-spacing: -0.05em; }
 .huge-square { left: -40px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; z-index: -1; }
 .huge-center { width: 160px; height: 160px; border-radius: 50%; border: 8px solid var(--color-white); flex-shrink: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 @media (min-width: 768px) {

@@ -7,87 +7,87 @@
     <link rel="stylesheet" href="./css/import.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="gw-body">
+<body class="bg-white text-black">
     
     <!-- Navbar -->
-    <header class="gw-header">
-        <div class="gw-logo">
-            <div class="gw-logo-icon"><i class="fa-solid fa-tree"></i></div>
+    <header class="container flex justify-between items-center py-6">
+        <div class="flex items-center gap-2 font-black text-xl">
+            <div class="logo-icon bg-black text-white flex justify-center items-center"><i class="fa-solid fa-tree"></i></div>
             GreenWorld
         </div>
-        <nav class="gw-nav">
-            <a href="#" class="gw-nav-pill"><i class="fa-solid fa-link"></i> Projects</a>
-            <a href="#" class="gw-nav-pill"><i class="fa-regular fa-file-lines"></i> News</a>
-            <a href="#" class="gw-nav-pill"><i class="fa-solid fa-bullhorn"></i> Campaigns</a>
+        <nav class="flex gap-2">
+            <a href="#" class="nav-pill flex items-center gap-2 text-xs font-bold text-gray-700 bg-white"><i class="fa-solid fa-link"></i> Projects</a>
+            <a href="#" class="nav-pill flex items-center gap-2 text-xs font-bold text-gray-700 bg-white"><i class="fa-regular fa-file-lines"></i> News</a>
+            <a href="#" class="nav-pill flex items-center gap-2 text-xs font-bold text-gray-700 bg-white"><i class="fa-solid fa-bullhorn"></i> Campaigns</a>
         </nav>
-        <button class="gw-btn gw-btn-black">Contact Us</button>
+        <button class="btn btn-black text-sm font-bold text-white bg-black">Contact Us</button>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="gw-hero">
-            <div class="gw-hero-bg-shape"></div>
+        <section class="container relative pb-10">
+            <div class="hero-bg-shape"></div>
             
-            <h1 class="gw-hero-title">
-                Join us in the <span class="gw-highlight">fight</span> for<br>the environment
+            <h1 class="hero-title font-black text-center mb-10 leading-tight">
+                Join us in the <span class="highlight bg-primary-light">fight</span> for<br>the environment
             </h1>
 
             <!-- Hero Grid -->
-            <div class="gw-hero-grid">
-                <!-- Col 1 (Taller, sits at top) -->
-                <div class="gw-hero-col gw-col-1">
-                    <p class="gw-hero-desc">
+            <div class="hero-grid">
+                <!-- Col 1 -->
+                <div class="hero-col hero-col-tall flex flex-col justify-between">
+                    <p class="text-sm text-gray-700 leading-loose hero-desc">
                         We are an organization that educates society about the problems of ecology and nature
                     </p>
-                    <div class="gw-card-abstract">
-                        <img src="./images/hero_abstract.png" alt="abstract" class="gw-img-bg">
-                        <div class="gw-abstract-center">
-                            <div class="gw-abstract-dot"></div>
+                    <div class="card-abstract relative flex justify-center items-center">
+                        <img src="./images/hero_abstract.png" alt="abstract" class="img-bg">
+                        <div class="abstract-center absolute bg-white flex justify-center items-center">
+                            <div class="abstract-dot"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Col 2 (Shorter, aligns bottom) -->
-                <div class="gw-hero-col gw-col-2">
-                    <div class="gw-card gw-card-white">
-                        <h3>+685 trees planted</h3>
-                        <p>More than 685 trees were planted last year with the help of our activists.</p>
+                <!-- Col 2 -->
+                <div class="hero-col hero-col-short flex flex-col gap-4">
+                    <div class="card bg-white flex flex-col justify-center">
+                        <h3 class="text-lg font-black mb-2">+685 trees planted</h3>
+                        <p class="text-xs text-gray-500 leading-base">More than 685 trees were planted last year with the help of our activists.</p>
                     </div>
-                    <div class="gw-card gw-card-lightgreen">
-                        <h3 class="gw-text-center">6 educational<br>programs</h3>
-                        <p class="gw-text-center">were launched and developed by our specialists to educate young people.</p>
+                    <div class="card bg-primary-light flex flex-col justify-center items-center text-center">
+                        <h3 class="text-lg font-black mb-2">6 educational<br>programs</h3>
+                        <p class="text-xs text-gray-700 leading-base">were launched and developed by our specialists to educate young people.</p>
                     </div>
                 </div>
 
-                <!-- Col 3 (Shorter, aligns bottom) -->
-                <div class="gw-hero-col gw-col-3">
-                    <div class="gw-card-main">
-                        <img src="./images/hero_tree.png" alt="Planting tree" class="gw-img-bg">
-                        <div class="gw-main-top-icon"><i class="fa-solid fa-leaf"></i></div>
-                        <div class="gw-main-badge">
-                            <span>Share with us<br>your results</span>
-                            <div class="gw-badge-icon"><i class="fa-solid fa-arrow-up-right"></i></div>
+                <!-- Col 3 -->
+                <div class="hero-col hero-col-short">
+                    <div class="card-main relative">
+                        <img src="./images/hero_tree.png" alt="Planting tree" class="img-bg">
+                        <div class="main-top-icon absolute bg-white flex justify-center items-center"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="main-badge absolute bg-white flex justify-between items-center">
+                            <span class="text-xs font-black leading-tight">Share with us<br>your results</span>
+                            <div class="badge-icon bg-black text-white flex justify-center items-center"><i class="fa-solid fa-arrow-up-right"></i></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Col 4 (Taller, sits at top) -->
-                <div class="gw-hero-col gw-col-4">
-                    <div class="gw-hero-learn-more">
-                        <button class="gw-btn gw-btn-light">
+                <!-- Col 4 -->
+                <div class="hero-col hero-col-tall flex flex-col justify-between">
+                    <div class="flex justify-end hero-learn-more">
+                        <button class="btn btn-light bg-primary-light text-sm font-bold flex items-center gap-2">
                             Learn More <i class="fa-solid fa-arrow-up-right"></i>
                         </button>
                     </div>
-                    <div class="gw-card gw-card-darkgreen">
-                        <div class="gw-tags">
-                            <span class="gw-tag">SUPPORT</span>
-                            <span class="gw-tag">ECOLOGY</span>
+                    <div class="card card-darkgreen flex flex-col justify-end relative text-white">
+                        <div class="flex gap-2 mb-3">
+                            <span class="tag">SUPPORT</span>
+                            <span class="tag">ECOLOGY</span>
                         </div>
-                        <h3>Donate and help<br>the environment</h3>
+                        <h3 class="text-sm font-black">Donate and help<br>the environment</h3>
                     </div>
-                    <div class="gw-card gw-card-lightgreen gw-card-dashed">
-                        <div class="gw-dashed-inner">
-                            <p>International<br>environment day</p>
+                    <div class="card card-dashed bg-primary-light flex justify-center items-center">
+                        <div class="dashed-inner flex justify-center items-center w-full h-full">
+                            <p class="text-xs font-black text-center">International<br>environment day</p>
                         </div>
                     </div>
                 </div>
@@ -95,8 +95,8 @@
         </section>
 
         <!-- Marquee Banner -->
-        <div class="gw-marquee">
-            <div class="gw-marquee-track">
+        <div class="marquee bg-primary-light">
+            <div class="marquee-track text-xs font-black">
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
@@ -109,109 +109,109 @@
         </div>
 
         <!-- Mission Section -->
-        <section class="gw-mission">
-            <div class="gw-mission-left">
-                <p>The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.</p>
+        <section class="container flex justify-between py-10 mission-section border-bottom">
+            <div class="mission-left">
+                <p class="text-xs text-gray-500 leading-loose max-w-xs">The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.</p>
             </div>
-            <div class="gw-mission-right">
-                <h2>We strive to protect nature<br>for future generations.</h2>
-                <div class="gw-mission-actions">
-                    <button class="gw-btn gw-btn-light">About Us</button>
-                    <button class="gw-btn-text">View Campaigns <i class="fa-solid fa-arrow-up-right"></i></button>
+            <div class="mission-right">
+                <h2 class="text-3xl font-black mb-6 leading-tight">We strive to protect nature<br>for future generations.</h2>
+                <div class="flex items-center gap-6">
+                    <button class="btn btn-light bg-primary-light text-sm font-bold">About Us</button>
+                    <button class="btn-text text-sm font-bold flex items-center gap-2">View Campaigns <i class="fa-solid fa-arrow-up-right"></i></button>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="gw-projects">
-            <div class="gw-badge-outline">Our Projects</div>
-            <h2 class="gw-projects-title">
-                We hold various events, campaigns and raise<br>funds for the implementation of projects to<br>preserve <span class="gw-highlight">the environment</span>
+        <section class="container py-10 projects-section">
+            <div class="badge-outline bg-white text-xs font-medium">Our Projects</div>
+            <h2 class="text-3xl font-black mt-6 mb-10 leading-tight max-w-3xl">
+                We hold various events, campaigns and raise<br>funds for the implementation of projects to<br>preserve <span class="highlight bg-primary-light">the environment</span>
             </h2>
             
-            <div class="gw-projects-grid">
+            <div class="projects-grid">
                 <!-- Card 1 -->
-                <div class="gw-pcard gw-pcard-wide">
-                    <div class="gw-pcard-content">
+                <div class="pcard pcard-wide bg-gray-100 flex justify-between">
+                    <div class="pcard-content flex flex-col justify-between">
                         <div>
-                            <h3>Cleaning up the<br>Danube</h3>
-                            <p>Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                            <h3 class="text-2xl font-black mb-4">Cleaning up the<br>Danube</h3>
+                            <p class="text-xs text-gray-500 leading-loose">Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
                         </div>
-                        <span class="gw-read-more">Read More <div class="gw-icon-circle-small"><i class="fa-solid fa-arrow-up-right"></i></div></span>
+                        <span class="read-more text-xs font-bold flex items-center gap-2 mt-6">Read More <div class="icon-circle-small bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-up-right"></i></div></span>
                     </div>
-                    <div class="gw-pcard-img">
-                        <img src="./images/project_river.png" alt="River" class="gw-img-bg">
+                    <div class="pcard-img relative">
+                        <img src="./images/project_river.png" alt="River" class="img-bg">
                     </div>
                 </div>
                 
                 <!-- Card 2 -->
-                <div class="gw-pcard gw-pcard-light">
-                    <div class="gw-pcard-badge">Forest gardens</div>
-                    <div class="gw-pcard-bottom">
-                        <span class="gw-read-more">Read More</span>
-                        <div class="gw-icon-circle-small"><i class="fa-solid fa-arrow-up-right"></i></div>
+                <div class="pcard pcard-light bg-primary-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="pcard-badge bg-white text-sm font-bold">Forest gardens</div>
+                    <div class="pcard-bottom flex justify-between items-end relative z-10">
+                        <span class="read-more text-xs font-bold">Read More</span>
+                        <div class="icon-circle-small bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
                 </div>
                 
                 <!-- Card 3 -->
-                <div class="gw-pcard gw-pcard-light">
-                    <div class="gw-pcard-badge">Become a volunteer</div>
-                    <div class="gw-pcard-bottom">
-                        <span class="gw-read-more">Read More</span>
-                        <div class="gw-icon-circle-small"><i class="fa-solid fa-arrow-up-right"></i></div>
+                <div class="pcard pcard-light bg-primary-light flex flex-col justify-between relative overflow-hidden">
+                    <div class="pcard-badge bg-white text-sm font-bold">Become a volunteer</div>
+                    <div class="pcard-bottom flex justify-between items-end relative z-10">
+                        <span class="read-more text-xs font-bold">Read More</span>
+                        <div class="icon-circle-small bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Campaigns Huge Text Section -->
-        <section class="gw-campaigns-huge">
-            <div class="gw-huge-left"><div class="gw-huge-square"></div>GREEN</div>
-            <div class="gw-huge-center">
-                <img src="./images/campaign_leaves.png" alt="Leaves" class="gw-img-bg">
+        <section class="campaigns-huge flex justify-center items-center py-10 border-bottom overflow-hidden">
+            <div class="huge-left font-black relative"><div class="huge-square bg-primary-light absolute"></div>GREEN</div>
+            <div class="huge-center relative z-10">
+                <img src="./images/campaign_leaves.png" alt="Leaves" class="img-bg">
             </div>
-            <div class="gw-huge-right">CAMPAIGNS</div>
+            <div class="huge-right font-black text-black">CAMPAIGNS</div>
         </section>
 
         <!-- Get Involved Section -->
-        <section class="gw-involved">
-            <div class="gw-involved-header">
-                <h2>Get Involved <i class="fa-solid fa-arrow-up-right"></i></h2>
-                <p>Information on the various ways in which visitors<br>can contribute to the work of The GreenWorld</p>
+        <section class="container py-10 involved-section">
+            <div class="flex justify-between items-start mb-10">
+                <h2 class="text-2xl font-black flex items-center gap-2">Get Involved <i class="fa-solid fa-arrow-up-right"></i></h2>
+                <p class="text-xs text-gray-500 text-right leading-loose">Information on the various ways in which visitors<br>can contribute to the work of The GreenWorld</p>
             </div>
             
-            <div class="gw-accordion">
-                <div class="gw-acc-item">
-                    <div class="gw-acc-title">You can become a volunteer</div>
-                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+            <div class="accordion flex flex-col gap-4">
+                <div class="acc-item bg-gray-100 flex justify-between items-center">
+                    <div class="text-base font-bold">You can become a volunteer</div>
+                    <div class="acc-icon bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
-                <div class="gw-acc-item gw-acc-active">
-                    <div class="gw-acc-top">
-                        <div class="gw-acc-title">You can share information</div>
-                        <div class="gw-acc-icon"><i class="fa-solid fa-arrow-up-right"></i></div>
+                <div class="acc-item acc-active bg-primary-light flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <div class="text-lg font-black">You can share information</div>
+                        <div class="acc-icon bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
-                    <p class="gw-acc-desc">Help us spread the word about the importance of protecting nature<br>and the environment by sharing our news and posts on social media.</p>
+                    <p class="text-xs text-gray-700 leading-loose max-w-md">Help us spread the word about the importance of protecting nature<br>and the environment by sharing our news and posts on social media.</p>
                 </div>
-                <div class="gw-acc-item">
-                    <div class="gw-acc-title">You can make a donation</div>
-                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+                <div class="acc-item bg-gray-100 flex justify-between items-center">
+                    <div class="text-base font-bold">You can make a donation</div>
+                    <div class="acc-icon bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
-                <div class="gw-acc-item">
-                    <div class="gw-acc-title">You can participate in campaigns</div>
-                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+                <div class="acc-item bg-gray-100 flex justify-between items-center">
+                    <div class="text-base font-bold">You can participate in campaigns</div>
+                    <div class="acc-icon bg-white flex justify-center items-center"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section class="gw-gallery">
-            <div class="gw-badge-outline gw-badge-white">Our Gallery</div>
-            <h2 class="gw-gallery-title">Evaluate your results<br>by browsing the gallery</h2>
+        <section class="gallery-section text-center pt-10">
+            <div class="badge-outline bg-white text-xs font-medium">Our Gallery</div>
+            <h2 class="text-2xl font-black mt-6 mb-10 leading-tight">Evaluate your results<br>by browsing the gallery</h2>
             
-            <div class="gw-gallery-arch">
-                <div class="gw-gallery-oval">
-                    <img src="./images/gallery_volunteers.png" alt="Volunteers" class="gw-img-bg">
-                    <button class="gw-gallery-btn">SEE ALL<br>PHOTOS</button>
+            <div class="gallery-arch bg-primary-light">
+                <div class="gallery-oval relative mx-auto overflow-hidden">
+                    <img src="./images/gallery_volunteers.png" alt="Volunteers" class="img-bg">
+                    <button class="gallery-btn absolute bg-white font-black text-xs">SEE ALL<br>PHOTOS</button>
                 </div>
             </div>
         </section>

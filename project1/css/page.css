@@ -91,8 +91,11 @@
     letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 50px 0; font-weight: 800;
 }
 
-.gw-hero-desc { font-size: 0.85rem; color: var(--color-gray-700); line-height: 1.6; margin: 0; }
-.gw-hero-learn-more { display: flex; justify-content: flex-end; }
+.gw-hero-intro {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 30px;
+}
+.gw-hero-desc { font-size: 0.85rem; color: var(--color-gray-700); max-width: 220px; line-height: 1.6; margin: 0; }
 
 /* Grid Setup */
 .gw-hero-grid {
@@ -105,9 +108,10 @@
     }
 }
 
-.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: flex-end; }
+.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: space-between; }
 
 /* Col 1 */
+.gw-col-1 { justify-content: flex-end; }
 .gw-card-abstract {
     width: 100%; aspect-ratio: 1; max-height: 180px;
     border-radius: 2rem; overflow: hidden; position: relative;
@@ -121,7 +125,7 @@
 .gw-abstract-dot { width: 16px; height: 16px; background-color: var(--color-primary-dark); border-radius: 4px; }
 
 /* Col 2 */
-.gw-card { border-radius: 2rem; padding: 24px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.gw-card { border-radius: 2rem; padding: 24px; flex: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 .gw-card h3 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 800; line-height: 1.2; }
 .gw-card p { margin: 0; font-size: 0.75rem; color: var(--color-gray-500); line-height: 1.5; }
 

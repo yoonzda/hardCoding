@@ -11,17 +11,17 @@
    - 화면 크기에 상관없이 동일한 색상, 굵기, 줄간격
    ========================================================================== */
 :root {
-    /* Colors */
-    --color-primary: #4361ee;
-    --color-primary-dark: #3a56d4;
-    --color-primary-light: #e8ecff;
+    /* Colors (GreenWorld Theme) */
+    --color-primary: #d6e5cd;
+    --color-primary-dark: #b8ccaa;
+    --color-primary-light: #eaf1e5;
     
-    --color-black: #111111;
-    --color-gray-900: #212529;
-    --color-gray-700: #495057;
-    --color-gray-500: #adb5bd;
-    --color-gray-300: #dee2e6;
-    --color-gray-100: #f8f9fa;
+    --color-black: #1b221a;
+    --color-gray-900: #2d382b;
+    --color-gray-700: #546651;
+    --color-gray-500: #8c9e89;
+    --color-gray-300: #d0d6ce;
+    --color-gray-100: #f2f4f0;
     --color-white: #ffffff;
     
     --color-success: #2b8a3e;

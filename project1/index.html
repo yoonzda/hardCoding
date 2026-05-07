@@ -12,90 +12,86 @@
     <!-- Navbar -->
     <header class="gw-header">
         <div class="gw-logo">
-            <span class="gw-logo-icon">🌱</span>
+            <div class="gw-logo-icon"><i class="fa-solid fa-tree"></i></div>
             GreenWorld
         </div>
         <nav class="gw-nav">
-            <a href="#" class="gw-nav-item"><i class="fa-regular fa-folder"></i> Projects</a>
-            <a href="#" class="gw-nav-item"><i class="fa-regular fa-newspaper"></i> News</a>
-            <a href="#" class="gw-nav-item"><i class="fa-solid fa-bullhorn"></i> Campaigns</a>
+            <a href="#" class="gw-nav-pill"><i class="fa-solid fa-link"></i> Projects</a>
+            <a href="#" class="gw-nav-pill"><i class="fa-regular fa-file-lines"></i> News</a>
+            <a href="#" class="gw-nav-pill"><i class="fa-solid fa-bullhorn"></i> Campaigns</a>
         </nav>
-        <button class="gw-btn gw-btn-dark">Contact Us</button>
+        <button class="gw-btn gw-btn-black">Contact Us</button>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="gw-hero">
-            <!-- Decorative floating icons -->
-            <div class="gw-floating-icon gw-icon-1"><i class="fa-solid fa-lock"></i></div>
-            <div class="gw-floating-icon gw-icon-2"><i class="fa-solid fa-paperclip"></i></div>
-            <div class="gw-floating-icon gw-icon-3"><i class="fa-solid fa-xmark"></i></div>
-            <div class="gw-floating-icon gw-icon-4"><i class="fa-solid fa-lock"></i></div>
+            <!-- Floating Icons -->
+            <div class="gw-float gw-float-1"><i class="fa-solid fa-lock"></i></div>
+            <div class="gw-float gw-float-2"><i class="fa-solid fa-paperclip"></i></div>
+            <div class="gw-float gw-float-3"><i class="fa-solid fa-xmark"></i></div>
+            <div class="gw-float gw-float-4"><i class="fa-solid fa-lock"></i></div>
             
-            <div class="gw-hero-title-area">
-                <h1 class="gw-hero-title">
-                    Join us in the <span class="gw-highlight">fight</span> for<br>the environment
-                </h1>
-            </div>
+            <h1 class="gw-hero-title">
+                Join us in the <span class="gw-highlight">fight</span> for<br>the environment
+            </h1>
             
             <div class="gw-hero-intro">
                 <p class="gw-hero-desc">
                     We are an organization that educates society about the problems of ecology and nature
                 </p>
                 <button class="gw-btn gw-btn-light">
-                    Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                    Learn More <i class="fa-solid fa-arrow-up-right"></i>
                 </button>
             </div>
 
             <!-- Hero Grid -->
             <div class="gw-hero-grid">
                 <!-- Col 1 -->
-                <div class="gw-hero-col-1">
+                <div class="gw-hero-col gw-col-1">
                     <div class="gw-card-abstract">
-                        <div class="gw-abstract-pattern"></div>
-                        <div class="gw-abstract-logo"><div class="gw-abstract-dot"></div></div>
+                        <img src="./images/hero_abstract.png" alt="abstract" class="gw-img-bg">
+                        <div class="gw-abstract-center">
+                            <div class="gw-abstract-dot"></div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Col 2 -->
-                <div class="gw-hero-col-2">
+                <div class="gw-hero-col gw-col-2">
                     <div class="gw-card gw-card-white">
                         <h3>+685 trees planted</h3>
                         <p>More than 685 trees were planted last year with the help of our activists.</p>
                     </div>
-                    <div class="gw-card gw-card-green">
-                        <h3>6 educational<br>programs</h3>
-                        <p>were launched and developed by our specialists to educate young people.</p>
+                    <div class="gw-card gw-card-lightgreen">
+                        <h3 class="gw-text-center">6 educational<br>programs</h3>
+                        <p class="gw-text-center">were launched and developed by our specialists to educate young people.</p>
                     </div>
                 </div>
 
-                <!-- Col 3 (Main Image) -->
-                <div class="gw-hero-col-3">
-                    <div class="gw-card-main-img">
-                        <!-- 이미지 깨짐 방지용 Fallback 배경색 설정 -->
-                        <div class="gw-img-fallback"></div>
-                        <img src="https://images.unsplash.com/photo-1594705597658-0021b7904031" alt="Planting tree" class="gw-img" onerror="this.style.display='none'">
-                        
-                        <div class="gw-top-icon"><i class="fa-solid fa-leaf"></i></div>
-                        
-                        <div class="gw-bottom-badge">
+                <!-- Col 3 -->
+                <div class="gw-hero-col gw-col-3">
+                    <div class="gw-card-main">
+                        <img src="./images/hero_tree.png" alt="Planting tree" class="gw-img-bg">
+                        <div class="gw-main-top-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="gw-main-badge">
                             <span>Share with us<br>your results</span>
-                            <div class="gw-badge-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="gw-badge-icon"><i class="fa-solid fa-arrow-up-right"></i></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Col 4 -->
-                <div class="gw-hero-col-4">
-                    <div class="gw-card gw-card-dark">
+                <div class="gw-hero-col gw-col-4">
+                    <div class="gw-card gw-card-darkgreen">
                         <div class="gw-tags">
-                            <span>SUPPORT</span>
-                            <span>ECOLOGY</span>
+                            <span class="gw-tag">SUPPORT</span>
+                            <span class="gw-tag">ECOLOGY</span>
                         </div>
                         <h3>Donate and help<br>the environment</h3>
                     </div>
-                    <div class="gw-card gw-card-green-square">
-                        <div class="gw-dashed-border">
+                    <div class="gw-card gw-card-lightgreen gw-card-dashed">
+                        <div class="gw-dashed-inner">
                             <p>International<br>environment day</p>
                         </div>
                     </div>
@@ -105,7 +101,9 @@
 
         <!-- Marquee Banner -->
         <div class="gw-marquee">
-            <div class="gw-marquee-content">
+            <div class="gw-marquee-track">
+                <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
+                <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
                 <span>Green The Planet <i class="fa-solid fa-earth-americas"></i></span>
@@ -117,14 +115,14 @@
 
         <!-- Mission Section -->
         <section class="gw-mission">
-            <p class="gw-mission-desc">
-                The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.
-            </p>
-            <div class="gw-mission-content">
+            <div class="gw-mission-left">
+                <p>The GreenWorld has carried out many successful projects for reforestation and biodiversity conservation.</p>
+            </div>
+            <div class="gw-mission-right">
                 <h2>We strive to protect nature for future generations.</h2>
                 <div class="gw-mission-actions">
                     <button class="gw-btn gw-btn-light">About Us</button>
-                    <button class="gw-btn-text">View Campaigns <i class="fa-solid fa-angle-right"></i></button>
+                    <button class="gw-btn-text">View Campaigns <i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
@@ -138,31 +136,32 @@
             
             <div class="gw-projects-grid">
                 <!-- Card 1 -->
-                <div class="gw-project-card gw-card-wide">
-                    <div class="gw-project-info">
-                        <h3>Cleaning up the Danube</h3>
-                        <p>Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                <div class="gw-pcard gw-pcard-wide">
+                    <div class="gw-pcard-content">
+                        <div>
+                            <h3>Cleaning up the Danube</h3>
+                            <p>Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                        </div>
                         <span class="gw-read-more">Read More <i class="fa-solid fa-arrow-up-right"></i></span>
                     </div>
-                    <div class="gw-project-img">
-                        <div class="gw-img-fallback"></div>
-                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" alt="River" class="gw-img" onerror="this.style.display='none'">
+                    <div class="gw-pcard-img">
+                        <img src="./images/project_river.png" alt="River" class="gw-img-bg">
                     </div>
                 </div>
                 
                 <!-- Card 2 -->
-                <div class="gw-project-card gw-card-green">
-                    <div class="gw-project-title-badge">Forest gardens</div>
-                    <div class="gw-project-bottom">
+                <div class="gw-pcard gw-pcard-light">
+                    <div class="gw-pcard-badge">Forest gardens</div>
+                    <div class="gw-pcard-bottom">
                         <span class="gw-read-more">Read More</span>
                         <div class="gw-icon-circle"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
                 </div>
                 
                 <!-- Card 3 -->
-                <div class="gw-project-card gw-card-green">
-                    <div class="gw-project-title-badge">Become a vo...</div>
-                    <div class="gw-project-bottom">
+                <div class="gw-pcard gw-pcard-light">
+                    <div class="gw-pcard-badge">Become a volunteer</div>
+                    <div class="gw-pcard-bottom">
                         <span class="gw-read-more">Read More</span>
                         <div class="gw-icon-circle"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
@@ -170,14 +169,13 @@
             </div>
         </section>
 
-        <!-- Campaigns Section -->
-        <section class="gw-campaigns">
-            <span class="gw-huge-outline">GREEN</span>
-            <div class="gw-huge-img">
-                <div class="gw-img-fallback"></div>
-                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735" alt="Leaves" class="gw-img" onerror="this.style.display='none'">
+        <!-- Campaigns Huge Text Section -->
+        <section class="gw-campaigns-huge">
+            <div class="gw-huge-left">GREEN</div>
+            <div class="gw-huge-center">
+                <img src="./images/campaign_leaves.png" alt="Leaves" class="gw-img-bg">
             </div>
-            <span class="gw-huge-solid">CAMPAIGNS</span>
+            <div class="gw-huge-right">CAMPAIGNS</div>
         </section>
 
         <!-- Get Involved Section -->
@@ -188,27 +186,24 @@
             </div>
             
             <div class="gw-accordion">
-                <div class="gw-accordion-item">
-                    <span>You can become a volunteer</span>
-                    <div class="gw-accordion-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+                <div class="gw-acc-item">
+                    <div class="gw-acc-title">You can become a volunteer</div>
+                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
-                
-                <div class="gw-accordion-item gw-active">
-                    <div class="gw-accordion-top">
-                        <span>You can share information</span>
-                        <div class="gw-accordion-icon"><i class="fa-solid fa-arrow-up-right"></i></div>
+                <div class="gw-acc-item gw-acc-active">
+                    <div class="gw-acc-top">
+                        <div class="gw-acc-title">You can share information</div>
+                        <div class="gw-acc-icon"><i class="fa-solid fa-arrow-up-right"></i></div>
                     </div>
-                    <p>Help us spread the word about the importance of protecting nature and the environment by sharing our news and posts on social media.</p>
+                    <p class="gw-acc-desc">Help us spread the word about the importance of protecting nature and the environment by sharing our news and posts on social media.</p>
                 </div>
-                
-                <div class="gw-accordion-item">
-                    <span>You can make a donation</span>
-                    <div class="gw-accordion-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+                <div class="gw-acc-item">
+                    <div class="gw-acc-title">You can make a donation</div>
+                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
-                
-                <div class="gw-accordion-item">
-                    <span>You can participate in campaigns</span>
-                    <div class="gw-accordion-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
+                <div class="gw-acc-item">
+                    <div class="gw-acc-title">You can participate in campaigns</div>
+                    <div class="gw-acc-icon"><i class="fa-solid fa-arrow-down-right"></i></div>
                 </div>
             </div>
         </section>
@@ -220,9 +215,7 @@
             
             <div class="gw-gallery-arch">
                 <div class="gw-gallery-oval">
-                    <div class="gw-img-fallback"></div>
-                    <img src="https://images.unsplash.com/photo-1594705597658-0021b7904031" alt="Volunteers" class="gw-img" onerror="this.style.display='none'">
-                    
+                    <img src="./images/gallery_volunteers.png" alt="Volunteers" class="gw-img-bg">
                     <button class="gw-gallery-btn">SEE ALL<br>PHOTOS</button>
                 </div>
             </div>

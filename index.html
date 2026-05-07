@@ -8,11 +8,10 @@
     <style>
         :root {
             --bg-color: #f8f9fa;
-            --text-color: #212529;
-            --primary-color: #4361ee;
-            --card-bg: rgba(255, 255, 255, 0.7);
-            --border-color: rgba(255, 255, 255, 0.5);
-            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            --text-color: #1a1a1a;
+            --text-muted: #868e96;
+            --border-color: #dee2e6;
+            --hover-color: #4361ee;
         }
 
         * {
@@ -24,179 +23,174 @@
         body {
             font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
             background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 0% 0%, hsla(253,16%,7%,0.03) 0, transparent 50%), 
-                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.03) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.03) 0, transparent 50%);
             color: var(--text-color);
             min-height: 100vh;
-            line-height: 1.6;
+            line-height: 1.5;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1440px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 6rem 4rem;
         }
 
         header {
-            margin-bottom: 5rem;
-            text-align: left;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 6rem;
+            max-width: 800px;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 5rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #2b2b2b 0%, #686868 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
 
         p.subtitle {
-            font-size: 1.25rem;
-            color: #6c757d;
+            font-size: 1.5rem;
+            color: var(--text-muted);
             font-weight: 400;
-            max-width: 600px;
+            word-break: keep-all;
         }
 
-        .grid-container {
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid var(--text-color);
+        }
+
+        .project-item {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 2.5rem;
+            grid-template-columns: 80px 1fr 2fr auto;
+            align-items: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
             text-decoration: none;
             color: inherit;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
+        .project-item:hover {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            background-color: transparent;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px 0 rgba(31, 38, 135, 0.1);
-            border-color: rgba(255, 255, 255, 0.8);
+        .project-item:hover .project-title {
+            color: var(--hover-color);
         }
 
-        .card:hover::before {
-            opacity: 1;
+        .project-item:hover .project-arrow svg {
+            transform: translateX(10px);
+            color: var(--hover-color);
         }
 
-        .card-content {
-            position: relative;
-            z-index: 2;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-number {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            background: rgba(67, 97, 238, 0.1);
-            padding: 0.25rem 1rem;
-            border-radius: 50px;
-        }
-
-        .card h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-
-        .card p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 2rem;
-            flex-grow: 1;
-        }
-
-        .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: auto;
-        }
-
-        .card-link {
-            font-size: 1rem;
+        .project-number {
+            font-size: 1.25rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--text-muted);
+        }
+
+        .project-title {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            transition: color 0.3s ease;
+        }
+
+        .project-desc {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            padding-right: 2rem;
+        }
+
+        .project-meta {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s ease;
+            gap: 3rem;
         }
 
-        .card:hover .card-link {
-            gap: 1rem;
-        }
-
-        .card-link svg {
-            width: 20px;
-            height: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .card-tags {
+        .project-tags {
             display: flex;
             gap: 0.5rem;
         }
 
         .tag {
-            font-size: 0.8rem;
-            padding: 0.25rem 0.75rem;
-            background: rgba(0,0,0,0.05);
-            border-radius: 6px;
-            color: #495057;
+            font-size: 0.875rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            color: var(--text-muted);
             font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover .tag {
+            border-color: var(--hover-color);
+            color: var(--hover-color);
+        }
+
+        .project-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover .project-arrow {
+            border-color: var(--hover-color);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        .project-arrow svg {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 1200px) {
+            .project-item {
+                grid-template-columns: 60px 1fr auto;
+            }
+            .project-desc {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 2rem 1.5rem;
+                padding: 4rem 2rem;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
             }
-            .grid-container {
+            .project-item {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 2rem 0;
             }
-            .card {
-                padding: 2rem;
+            .project-item:hover {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .project-number {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            .project-title {
+                font-size: 2rem;
+            }
+            .project-meta {
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 1rem;
             }
         }
     </style>
@@ -205,95 +199,71 @@
 
     <div class="container">
         <header>
-            <h1>Projects</h1>
-            <p class="subtitle">원페이지 프로젝트 목록입니다. 다양한 UI/UX 작업물을 확인해보세요.</p>
+            <h1>Showcase.</h1>
+            <p class="subtitle">다양한 UI/UX를 실험하고 구현한 원페이지 웹 프로젝트 컬렉션입니다.</p>
         </header>
 
-        <div class="grid-container">
+        <div class="project-list">
             <!-- Project 1 -->
-            <a href="#project1" class="card">
-                <div class="card-content">
-                    <div>
-                        <span class="card-number">01</span>
+            <a href="#project1" class="project-item">
+                <div class="project-number">01</div>
+                <h2 class="project-title">인터랙티브 포트폴리오</h2>
+                <p class="project-desc">마우스 스크롤에 반응하는 부드러운 패럴랙스 효과와 트랜지션을 적용한 웹페이지입니다.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
                     </div>
-                    <h2>프로젝트 타이틀 1</h2>
-                    <p>현대적이고 감각적인 디자인의 첫 번째 원페이지 사이트입니다. 부드러운 인터랙션이 특징입니다.</p>
-                    
-                    <div class="card-footer">
-                        <div class="card-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                        <div class="card-link">
-                            View Site
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </div>
+                    <div class="project-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </div>
                 </div>
             </a>
 
             <!-- Project 2 -->
-            <a href="#project2" class="card">
-                <div class="card-content">
-                    <div>
-                        <span class="card-number">02</span>
+            <a href="#project2" class="project-item">
+                <div class="project-number">02</div>
+                <h2 class="project-title">미니멀 에이전시</h2>
+                <p class="project-desc">여백의 미를 살리고 타이포그래피에 집중하여 브랜드의 가치를 높이는 디자인입니다.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">GSAP</span>
+                        <span class="tag">JS</span>
                     </div>
-                    <h2>프로젝트 타이틀 2</h2>
-                    <p>깔끔하고 와이드한 레이아웃을 적용한 두 번째 포트폴리오 프로젝트입니다.</p>
-                    
-                    <div class="card-footer">
-                        <div class="card-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">GSAP</span>
-                        </div>
-                        <div class="card-link">
-                            View Site
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </div>
+                    <div class="project-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </div>
                 </div>
             </a>
 
             <!-- Project 3 -->
-            <a href="#project3" class="card">
-                <div class="card-content">
-                    <div>
-                        <span class="card-number">03</span>
+            <a href="#project3" class="project-item">
+                <div class="project-number">03</div>
+                <h2 class="project-title">다크모드 대시보드</h2>
+                <p class="project-desc">눈이 편안한 색상과 데이터 시각화에 최적화된 다크 테마 원페이지 레이아웃입니다.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">UI/UX</span>
                     </div>
-                    <h2>프로젝트 타이틀 3</h2>
-                    <p>사용자 경험을 최우선으로 고려한 미니멀리즘 디자인의 세 번째 작업물입니다.</p>
-                    
-                    <div class="card-footer">
-                        <div class="card-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Three.js</span>
-                        </div>
-                        <div class="card-link">
-                            View Site
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </div>
+                    <div class="project-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </div>
                 </div>
             </a>
             
             <!-- Project 4 -->
-            <a href="#project4" class="card">
-                <div class="card-content">
-                    <div>
-                        <span class="card-number">04</span>
+            <a href="#project4" class="project-item">
+                <div class="project-number">04</div>
+                <h2 class="project-title">크리에이티브 스튜디오</h2>
+                <p class="project-desc">다양한 이미지와 영상을 가로 스크롤과 재미있는 배치로 풀어낸 작업물입니다.</p>
+                <div class="project-meta">
+                    <div class="project-tags">
+                        <span class="tag">Vue</span>
+                        <span class="tag">SCSS</span>
                     </div>
-                    <h2>프로젝트 타이틀 4</h2>
-                    <p>다크 모드와 타이포그래피에 집중한 네 번째 반응형 웹 프로젝트입니다.</p>
-                    
-                    <div class="card-footer">
-                        <div class="card-tags">
-                            <span class="tag">Vue</span>
-                            <span class="tag">SCSS</span>
-                        </div>
-                        <div class="card-link">
-                            View Site
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </div>
+                    <div class="project-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </div>
                 </div>
             </a>

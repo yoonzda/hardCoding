@@ -105,10 +105,9 @@
     }
 }
 
-.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: space-between; }
+.gw-hero-col { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: flex-end; }
 
 /* Col 1 */
-.gw-col-1 { justify-content: space-between; }
 .gw-card-abstract {
     width: 100%; aspect-ratio: 1; max-height: 180px;
     border-radius: 2rem; overflow: hidden; position: relative;
@@ -122,7 +121,7 @@
 .gw-abstract-dot { width: 16px; height: 16px; background-color: var(--color-primary-dark); border-radius: 4px; }
 
 /* Col 2 */
-.gw-card { border-radius: 2rem; padding: 24px; flex: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+.gw-card { border-radius: 2rem; padding: 24px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
 .gw-card h3 { margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 800; line-height: 1.2; }
 .gw-card p { margin: 0; font-size: 0.75rem; color: var(--color-gray-500); line-height: 1.5; }
 
@@ -165,7 +164,7 @@
 .gw-card-darkgreen h3 { font-size: 1rem; }
 
 .gw-card-dashed {
-    padding: 16px; flex: none; height: 160px;
+    padding: 16px; height: 160px;
 }
 .gw-dashed-inner {
     border: 1px dashed var(--color-white); border-radius: 1.5rem;
@@ -218,6 +217,7 @@
 .gw-pcard {
     border-radius: 2rem; padding: 40px;
     display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; /* Added to keep absolute image inside */
 }
 .gw-pcard-wide { background-color: var(--color-gray-100); flex-direction: row; align-items: stretch; }
 .gw-pcard-content { display: flex; flex-direction: column; justify-content: space-between; max-width: 220px; }
